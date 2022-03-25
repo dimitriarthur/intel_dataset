@@ -1,6 +1,5 @@
 import numpy as np
 import math
-from itertools import izip
 
 class Measurement:
 
@@ -81,7 +80,7 @@ class DataLoader:
 		# temporally aligned, so no timestamp alignment is required here
 		laser_file = open(laser_file_name, 'r')
 		odo_file = open(odo_file_name, 'r')
-		for laser_line, odo_line in izip(laser_file,odo_file):
+		for laser_line, odo_line in zip(laser_file,odo_file):
 
 			# process laser measurements from string to list of floats
 			laser_list = laser_line.split(' ')
